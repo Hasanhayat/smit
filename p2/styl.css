@@ -1,0 +1,27 @@
+*{
+    font-family: sans-serif;
+    
+}
+
+table{
+    /* border: 1px solid black; */
+    border-spacing: 0px;
+    text-align: left;
+}
+th,td{
+    border: 1px solid black;
+    padding: 5px 30px 5px 10px;
+    
+}
+.h{
+    background-color:  #90b4d6;
+    color: #ffffff;
+    border-bottom: 2px solid #547ca0;
+    border-right: 1px solid #749abe;
+    border-top: 1px solid #90b4d6;
+    text-align: center;
+    text-shadow: -1px -1px 1px #666;
+    letter-spacing: 0.15em;
+    border: 1px solid white;
+    border-radius: 5px;
+}
