@@ -25,3 +25,10 @@ th,td{
     border: 1px solid white;
     border-radius: 5px;
 }
+.h th:first-child {
+    border-top-left-radius: 10px; /* Top left corner */
+}
+
+.h th:last-child {
+    border-top-right-radius: 10px; /* Top right corner */
+}
