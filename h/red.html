@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        p{
+            display: none;
+        }
+        input{
+            outline: none;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="name">
+    <p>name is required</p>
+    <button onclick="red()">submit</button>
+
+
+    <script>
+        let input = document.querySelector("#name")
+        let p = document.querySelector("P")
+        function red(){
+            if(!input.value){
+                input.style.borderColor = "red";
+                p.style.display = "block";
+
+            }
+        }
+    </script>
+</body>
+</html>

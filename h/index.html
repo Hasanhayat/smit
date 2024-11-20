@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H . . .</title>
+    <style>
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<input class="inp1" type="text" placeholder="COUNTRY NAME" name="" id="">
+<input class="inp2" type="text" placeholder="CITY NAME" name="" id="">
+<button onclick="checkNamazTime()">CHECK NAMAZ TIME</button>
+<h2>
+
+</h2>
+
+
+<script src="addmission.js"></script>
+<script src="app.js"></script>
+    <script>
+        
+
+function checkNamazTime(){
+    let city = document.querySelector(".inp2").value;
+    let country = document.querySelector(".inp1").value;
+    let URL = `https://api.aladhan.com/v1/timingsByCity/28-10-2024?city=${city}&country=${country}`
+    let result = document.querySelector("h2");
+
+    fetch(URL).then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        let times = data.data.timings;
+        console.log(times);
+        
+        
+     result.innerHTML = `FAJR : ${times.Fajr}<br>ZOHR : ${times.Dhuhr}<br>ASR : ${times.Asr}<br>MAGRIB : ${times.Maghrib}<br>ISHA : ${times.Isha}<br>`;
+    })
+    
+}
+
+
+
+
+
+    </script>
+</body>
+</html>
